@@ -1,4 +1,4 @@
 class Event < ApplicationRecord
-    # belongs_to :day
-    # has_one :location
+    belongs_to :day
+    has_one :location
 end
