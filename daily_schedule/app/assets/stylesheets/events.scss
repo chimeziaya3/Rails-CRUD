@@ -1,0 +1,30 @@
+// Place all the styles related to the events controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+body{
+    position: relative;
+}
+
+.containerDiv{
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+}
+
+.eventContainerDiv{
+    background-color: grey;
+    margin: 0 auto;
+    width: 500px;
+    
+}
+
+p, a{
+    font-family: verdana, arial, helvetica, sans-serif;
+    text-decoration: none;
+}
+
+.time{
+    display: flex;
+    justify-content: center;
+}

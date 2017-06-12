@@ -10,35 +10,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170611194609) do
+ActiveRecord::Schema.define(version: 20170611194603) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "days", force: :cascade do |t|
-    t.date "date"
-    t.bigint "event_id"
+    t.string "date"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["event_id"], name: "index_days_on_event_id"
   end
 
   create_table "events", force: :cascade do |t|
     t.string "event"
     t.string "start_time"
     t.string "end_time"
-    t.bigint "location_id"
+    t.bigint "day_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["location_id"], name: "index_events_on_location_id"
-  end
-
-  create_table "locations", force: :cascade do |t|
-    t.string "city"
-    t.string "state"
-    t.string "country"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.index ["day_id"], name: "index_events_on_day_id"
   end
 
 end
